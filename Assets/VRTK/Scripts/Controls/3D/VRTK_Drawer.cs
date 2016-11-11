@@ -195,10 +195,14 @@ namespace VRTK
             {
                 io = gameObject.AddComponent<VRTK_InteractableObject>();
             }
+
+            var grabAttachSpring = gameObject.AddComponent<GrabAttachMechanics.VRTK_CustomJointGrabAttach>();
+            grabAttachSpring.customJoint = gameObject.AddComponent<SpringJoint>();
+            grabAttachSpring.precisionGrab = true;
+
             io.isGrabbable = true;
-            io.precisionSnap = true;
+            io.grabAttachMechanicScript = grabAttachSpring;
             io.stayGrabbedOnTeleport = false;
-            io.grabAttachMechanic = VRTK_InteractableObject.GrabAttachType.Spring_Joint;
 
             if (connectedTo)
             {

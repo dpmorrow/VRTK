@@ -21,10 +21,9 @@
             controllerEvents = grabbingObject.GetComponent<VRTK_ControllerEvents>();
         }
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
-            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            interactableRigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
         }
 
         private void OnCollisionEnter(Collision collision)

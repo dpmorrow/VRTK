@@ -14,9 +14,8 @@
             fireTimer = fireDistance;
         }
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
             restPosition = transform.localPosition.z;
         }
 

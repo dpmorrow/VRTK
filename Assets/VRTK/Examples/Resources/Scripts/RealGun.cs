@@ -108,9 +108,8 @@
             }
         }
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
             bullet = transform.Find("Bullet").gameObject;
             bullet.SetActive(false);
 
